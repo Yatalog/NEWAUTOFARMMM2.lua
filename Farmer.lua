@@ -37,11 +37,9 @@ while true do
             tween:Play()
             tween.Completed:Wait() -- Ждем завершения Tween
             
-            -- Ждем 0.5 секунды перед тем, как переместить персонажа
-            wait(0.5)
-
-            -- Перемещаем персонажа немного назад после сбора монеты
-            humanoidRootPart.CFrame = humanoidRootPart.CFrame * CFrame.new(0, 0, -2) -- Измените значение, если нужно
+            -- Ждем 1.5 секунды перед уничтожением монеты
+            wait(0.2)
+            targetCoin:Destroy() -- Уничтожаем монету
         else
             warn("HumanoidRootPart не найден")
         end
