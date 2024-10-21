@@ -37,8 +37,8 @@ while true do
             tween:Play()
             tween.Completed:Wait() -- Ждем завершения Tween
             
-            -- Ждем 1.5 секунды перед уничтожением монеты
-            wait(0.2)
+            -- Ждем 0.3 секунды перед уничтожением монеты
+            wait(0.3)
             targetCoin:Destroy() -- Уничтожаем монету
         else
             warn("HumanoidRootPart не найден")
