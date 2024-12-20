@@ -54,9 +54,11 @@ local function createMenu()
                     local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = CFrame.new(targetPosition)})
 
                     tween:Play()
-                    tween.Completed:Wait()
-                    wait(0.3)
-                    targetCoin:Destroy()
+     local function del()
+targetCoin:Destroy()
+end               wait(0.1)
+  targetCoin.Touched:Connect(del)                 
+                    
                 else
                     warn("HumanoidRootPart не найден")
                 end
